@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <h2>التنبؤ بأمراض القلب</h2>
+    <form action="{{ url_for('predictheartdisease') }}" method="POST">
+        <input type="number" name="Thallium" placeholder="العمر" required>
+        <input type="number" name="Number of vessels fluro" placeholder="الجنس (1=ذكر, 0=أنثى)" required>
+        <input type="number" name="Slope of ST" placeholder="نوع ألم الصدر (0-3)" required>
+        <input type="number" name="ST depression" placeholder="120" required>
+        <input type="number" name="Exercise angina" placeholder="322" required>
+        <input type="number" name="Max HR" placeholder="0_1" required>
+        <input type="number" name="EKG results" placeholder="2_0" required>
+        <input type="number" name="FBS over 120" placeholder="140" required>
+        <input type="number" name="Cholesterol" placeholder="0_1" required>
+        <input type="number" name="BP" placeholder="2.3" required>
+        <input type="number" name="Chest pain type" placeholder="2" required>
+        <input type="number" name="Sex" placeholder="3" required>
+        <input type="number" name="Age" placeholder="6" required>
+        <button type="submit" class="btn btn-primary">توقع النتيجة</button>
+    </form>
+    {% if prediction_text %}
+        <div class="alert alert-info mt-3">{{ prediction_text }}</div>
+    {% endif %}
+</div>
+{% endblock %}
