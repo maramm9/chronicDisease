@@ -1,82 +1,0 @@
-
-{% extends "layout.html" %}
-
-{% block title %}صفحة التنبؤ بالأمراض{% endblock %}
-
-{% block content %}
-<div class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <h2 class="mb-4 text-center">🤖 التنبؤ بالمرض المزمن</h2>
-            
-            {% if error_message %}
-            <div class="alert alert-danger" role="alert">
-                {{ error_message }}
-            </div>
-            {% endif %}
-
-            <div class="card shadow-lg p-4">
-                <form id="predictionForm" method="POST" action="{{ url_for('predictdiabetes') }}">
-                    <p class="text-muted mb-4">يرجى إدخال البيانات المطلوبة لإجراء التنبؤ:</p>
-                    
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="pregnancies" class="form-label">عدد مرات الحمل</label>
-                            <input type="number" step="1" min="0" class="form-control" id="pregnancies" name="pregnancies" required>
-                            <div class="invalid-feedback">مطلوب عدد مرات الحمل.</div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                            <label for="glucose" class="form-label"> 148  (mg/dL)</label>
-                            <input type="number" step="any" min="0" class="form-control" id="glucose" name="glucose" required>
-                            <div class="invalid-feedback">مطلوب مستوى الجلوكوز.</div>
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="blood_pressure" class="form-label"> 72  (mmHg)</label>
-                            <input type="number" step="any" min="0" class="form-control" id="blood_pressure" name="blood_pressure" required>
-                            <div class="invalid-feedback">مطلوب ضغط الدم.</div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="skin_thickness" class="form-label"> 35   (mm)</label>
-                            <input type="number" step="any" min="0" class="form-control" id="skin_thickness" name="skin_thickness" required>
-                            <div class="invalid-feedback">مطلوب سماكة جلد العضلة.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="insulin" class="form-label">مستوى 0  (mu U/ml)</label>
-                            <input type="number" step="any" min="0" class="form-control" id="insulin" name="insulin" required>
-                            <div class="invalid-feedback">مطلوب مستوى الأنسولين.</div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="bmi" class="form-label">مؤشر كتلة 33.6 (BMI)</label>
-                            <input type="number" step="any" min="0" class="form-control" id="bmi" name="bmi" required>
-                            <div class="invalid-feedback">مطلوب مؤشر كتلة الجسم.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="row mb-4">
-                        <div class="col-md-6">
-                            <label for="diabetes_pedigree_function" class="form-label">دالة نسب 0.600</label>
-                            <input type="number" step="any" min="0" class="form-control" id="diabetes_pedigree_function" name="diabetes_pedigree_function" required>
-                            <div class="invalid-feedback">مطلوب دالة نسب السكري.</div>
-                        </div>
-                       <div class="col-md-6">
-                            <label for="age" class="form-label">age</label>
-                            <input type="number" step="any" min="0" class="form-control" id="age" name="age" required>
-                            <div class="invalid-feedback">age</div>
-                        </div>
-                        <form action="/predictdiabetes" method="POST">
-                           <div style="text-align: center; margin-top: 30px;">
-                               <button type="submit" class="btn btn-primary">
-                                      إجراء التنبؤ        
-                               </button>
-                             </div>
-                        </form>
-   {% endblock %}
