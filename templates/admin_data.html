@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<body class="bg-light">
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>سجلات التنبؤ والنظام</h2>
+            <a href="/admin/users" class="btn btn-outline-primary">إدارة المستخدمين</a>
+        </div>
+
+        <div class="row mb-4">
+            {% for stat in stats %}
+            <div class="col-md-3">
+                <div class="card bg-white shadow-sm border-0 mb-2">
+                    <div class="card-body text-center">
+                        <h6 class="text-muted">{{ stat.prediction }}</h6>
+                        <h3 class="text-primary">{{ stat.count }} حالة</h3>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>المستخدم</th>
+                            <th>المرض المتوقع</th>
+                            <th>التاريخ</th>
+                            <th>إجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for pred in predictions %}
+                        <tr>
+                            <td>{{ pred.username }}</td>
+                            <td><span class="badge bg-info text-dark">{{ pred.prediction }}</span></td>
+                            <td>{{ pred.created_at }}</td>
+                            <td>
+                            <!-- زر حذف -->
+                            <form action="{{ url_for('delete_prediction', prediction_id=pred.prediction_id) }}" method="POST" style="display:inline;">
+                             <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('هل أنت متأكد من حذف هذا السجل؟')">
+                                حذف
+                             </button>
+                             </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

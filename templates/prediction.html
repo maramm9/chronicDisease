@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block title %}  predict {% endblock %}
+
+{% block content %}
+
+
+<div class="container py-5 predict-container">
+  <h2 class="mb-4"> <i class="bi bi-diagram-3"></i>  تنبؤ المرض حسب الأعراض  </h2>
+
+  <!-- فورم اختيار الأعراض -->
+  <form method="POST" action="{{ url_for('prediction') }}">
+      <div id="symptoms-container" class="row mb-3">
+        <div class="col-md-4 mb-3 symptom-item">
+         <label class="form-label">العَرَض</label>
+         <select class="form-select" name="symptoms[]">
+         <option value="">اختر عرضًا</option>
+         {% for symptom in symptoms_list %}
+          <option value="{{ symptom }}">
+            {{ symptoms_ar.get(symptom, symptom) }}
+          </option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-secondary mb-3" onclick="addSymptom()">
+    ➕ إضافة عرض
+  </button>
+
+  <button type="submit" class="btn btn-primary btn-predict fs-4">
+    تنبؤ
+  </button>
+  </form>
+  <div id="symptom-template" class="d-none">
+  <div class="col-md-4 mb-3 symptom-item">
+    <label class="form-label">العَرَض</label>
+    <select class="form-select" name="symptoms[]">
+      <option value="">اختر عرضًا</option>
+      {% for symptom in symptoms_list %}
+        <option value="{{ symptom }}">
+          {{ symptoms_ar.get(symptom, symptom) }}
+        </option>
+      {% endfor %}
+    </select>
+    <button type="button" class="btn btn-sm btn-danger mt-1"
+      onclick="this.parentElement.remove()">
+      حذف
+    </button>
+  </div>
+</div>
+
+
+  <!-- عرض الأخطاء -->
+  {% if error %}
+  <div class="alert alert-danger mt-3">{{ error }}</div>
+  {% endif %}
+
+  <!-- عرض نتيجة التنبؤ -->
+  {% if result %}
+  <div class="alert alert-primary mt-4">
+    <h4>المرض المتوقع: {{ result }}</h4>
+  </div>
+
+  <!-- عرض التوصيات في Cards -->
+  {% if tips %}
+  <div class="row">
+    <h2> <i class="bi bi-receipt-cutoff"></i> توصيات عامة:</h2>
+    {% for tip in tips %}
+    <div class="col-md-6 mb-3">
+      <div class="card shadow-sm h-100">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <p class="card-text">{{ tip }}</p>
+          {% if links[loop.index0] %}
+            <h3><i class="bi bi-bandaid"></i> مصادر طبية موثوقة:</h3>
+          <a href="{{ links[loop.index0] }}" target="_blank" class="btn btn-sm btn-primary mt-2">اقرأ أكثر</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endif %}
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="p-5 mb-4 bg-light rounded-3 text-center shadow">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">نظام التنبؤ الذكي بالأمراض المزمنة</h1>
+            <p class="col-md-8 fs-4 mx-auto">
+                نستخدم قوة التعلم الآلي و تحليل البيانات للتنبؤ بخطر الإصابة ببعض الأمراض المزمنة بناءً على مجموعة من البيانات الصحية المدخلة.
+            </p>
+            <hr class="my-4">
+            <p>ابدأ الآن بإدخال بياناتك الصحية للحصول على تقييم فوري. يتطلب تسجيل الدخول.</p>
+            <a class="btn btn-primary btn-lg" href="{{ url_for('prediction') }}" role="button">ابدأ التنبؤ  </a>
+        </div>
+    </div>
+
+<div class="features-container">
+    <div class="feature-card">
+        <i class="fas fa-database feature-icon"></i>
+        <h3>صحتك أولويتنا</h3>
+        <p> صحتك ليست مجرد أرقام بل هي أغلى ما تملك، نرجو مراجعة طبيب في أقرب وقت ممكن</p>
+    </div>
+
+    <div class="feature-card">
+        <i class="fas fa-microchip feature-icon"></i>
+        <h3>النماذج الذكية</h3>
+        <p>نستخدم خوارزميات متقدمة مدربة على قواعد بيانات طبية ضخمة، لتمكين النظام من التنبؤ بالمخاطر الصحية بدقة عالية.</p>
+    </div>
+
+    <div class="feature-card">
+        <i class="fas fa-shield-virus feature-icon"></i>
+        <h3>الوقاية الاستباقية</h3>
+        <p>هدفنا تمكينك من اتخاذ خطوات استباقية؛ فالكشف المبكر هو المفتاح الحقيقي لرحلة علاجية أنجح وحياة صحية مديدة.</p>
+    </div>
+</div>
+{% endblock %}

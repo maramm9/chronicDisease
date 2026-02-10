@@ -1,0 +1,176 @@
+body {
+    font-family: 'Times New Roman', Tahoma, Geneva, Verdana, sans-serif, 'Arial', sans-serif;
+    background-color: #f8f9fa; 
+    color: #030303;
+    font-weight:bold;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url("bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
+    image-rendering:optimizeQuality;
+
+}
+.navbar{
+    background-color: rgb(16, 125, 133);
+}
+
+
+
+main {
+    flex-grow: 1;
+}
+
+/* ---------------------------------------------------- */
+/* 2. شريط التنقل (Navbar) والتذييل (Footer) */
+/* ---------------------------------------------------- */
+
+.navbar {
+    border-bottom: 3px solid #007bff; 
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+    color: #e9ecef !important;
+    transition: color 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #558cc7 !important; 
+    background-color: #343a40;
+}
+
+footer {
+    background-color: rgb(16, 125, 133) !important; 
+    border-top: 3px solid #007bff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2{
+    color: #171718;
+}
+
+/* ---------------------------------------------------- */
+/* 3. عناصر الصفحة الرئيسية (Index) */
+/* ---------------------------------------------------- */
+
+.jumbotron, .bg-light {
+    background-color: #fff !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+}
+
+.jumbotron h1 {
+    color: #007bff;
+    font-weight: 800;
+}
+
+.btn-primary {
+    background-color: #1b615d;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: rgb(16, 125, 133);
+    border-color: #0056b3;
+    transform: translateY(-2px); 
+}
+
+/* ---------------------------------------------------- */
+/* 4. تنسيق البطاقات (Predict, Result, Login, Register) */
+/* ---------------------------------------------------- */
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px); 
+}
+
+.form-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+/* ---------------------------------------------------- */
+/* 5. تنسيق صفحة النتيجة (Result Page) */
+/* ---------------------------------------------------- */
+
+.text-success {
+    color: #28a745 !important; 
+}
+
+.text-danger {
+    color: #dc3545 !important; 
+}
+
+
+.predict-container { max-width: 800px; margin: 20px auto; padding: 20px; direction: rtl; }
+.grid-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.input-group { display: flex; flex-direction: column; }
+label { margin-bottom: 5px; font-weight: bold; color: #333; }
+input { padding: 8px; border: 1px solid #ccc; border-radius: 5px; }
+.error-msg { color: red; background: #ffdada; padding: 10px; border-radius: 5px; }
+
+
+/*idex.html styling*/
+ .features-container {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        padding: 40px 10% ;
+        direction: rtl; /* لضبط الاتجاه العربي */
+ }
+
+    .feature-card {
+        background: #d3e4e9;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+        flex: 1;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid #eef2f6;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .feature-icon {
+        font-size: 40px;
+        color: #17a2b8; /* لون سماوي متناسق مع صورتك */
+        margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    .feature-card p {
+        font-size: 15px;
+        color: #666;
+        line-height: 1.8; /* تباعد الأسطر لراحة العين */
+    }

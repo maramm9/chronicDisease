@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>مرحباً، {{ username }} 👋</h2>
+            <p class="text-muted">نظرة عامة على نشاطك الصحي الأخير.</p>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card p-3 shadow-sm">
+                <h4 class="mb-3 text-primary"><i class="fas fa-pills"></i> سجل فحوصاتك</h4>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>التاريخ</th>
+                                <th>النتيجة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in disease_records %}
+                            <tr>
+                                <td>{{ row.created_at }}</td>
+                                <td>{{ row.prediction }} </td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="2" class="text-center">لا توجد سجلات بعد</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

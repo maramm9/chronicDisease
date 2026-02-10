@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<body class="bg-light">
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2>قائمة المستخدمين</h2>
+            <a href="/admin/data" class="btn btn-outline-secondary">عرض البيانات</a>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <table class="table table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th>الاسم</th>
+                            <th>البريد</th>
+                            <th>الصلاحية</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in users %}
+                        <tr>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>
+                                <span class="badge {% if user.role == 1 %}bg-danger {% else %}bg-success{% endif %}">
+                                    {{ user.role }}
+                                </span>
+                            </td>
+                            <td>
+                                <form action="{{ url_for('delete_user', user_id=user.user_id) }}" method="POST" onsubmit="return confirm('حذف هذا المستخدم؟');">
+                                    <button class="btn btn-sm btn-danger">حذف</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
