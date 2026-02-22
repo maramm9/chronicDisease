@@ -28,7 +28,7 @@ def get_db_connection():
 
 def init_db():
     """إنشاء الجداول تلقائياً إذا لم تكن موجودة"""
-    conn = get_db_connection()
+    conn = get_db_connection() 
     conn.execute('''CREATE TABLE IF NOT EXISTS users (
                     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
                     username TEXT NOT NULL,
@@ -51,7 +51,7 @@ init_db()
  #تحميل النموذج
 try:
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    svm_model = joblib.load(os.path.join(BASE_DIR, "svm_model.pkl"))
+    rf_model = joblib.load(os.path.join(BASE_DIR, "rf_model.pkl"))
     le = joblib.load(os.path.join(BASE_DIR, "le.pkl"))
     symptoms_list = joblib.load(os.path.join(BASE_DIR, "symptoms_list.pkl"))
 
@@ -59,7 +59,7 @@ try:
     
 except FileNotFoundError:
    
-    svm_model = None
+    rf_model = None
     le = None
     symptoms_list = None
     
@@ -187,7 +187,7 @@ def prediction():
                     input_df.at[0, symptom] = 1
 
             #  التنبؤ
-            pred_num = svm_model.predict(input_df)[0]
+            pred_num = rf_model.predict(input_df)[0]
             disease_name = le.inverse_transform([pred_num])[0]
             #ترجمة اسم المرض للعربية
             disease_ar = DISEASE_AR.get(disease_name,disease_name)

@@ -14,9 +14,6 @@ body {
     image-rendering:optimizeQuality;
 
 }
-.navbar{
-    background-color: rgb(16, 125, 133);
-}
 
 
 
@@ -25,12 +22,16 @@ main {
 }
 
 /* ---------------------------------------------------- */
-/* 2. شريط التنقل (Navbar) والتذييل (Footer) */
+/*  شريط التنقل (Navbar) والتذييل (Footer) */
 /* ---------------------------------------------------- */
 
 .navbar {
     border-bottom: 3px solid #007bff; 
 }
+.navbar{
+    background-color: rgb(16, 125, 133);
+}
+
 
 .navbar-brand {
     font-weight: 700;
@@ -59,35 +60,9 @@ h2{
     color: #171718;
 }
 
-/* ---------------------------------------------------- */
-/* 3. عناصر الصفحة الرئيسية (Index) */
-/* ---------------------------------------------------- */
-
-.jumbotron, .bg-light {
-    background-color: #fff !important;
-    border-radius: 15px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
-}
-
-.jumbotron h1 {
-    color: #007bff;
-    font-weight: 800;
-}
-
-.btn-primary {
-    background-color: #1b615d;
-    border-color: #007bff;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-primary:hover {
-    background-color: rgb(16, 125, 133);
-    border-color: #0056b3;
-    transform: translateY(-2px); 
-}
 
 /* ---------------------------------------------------- */
-/* 4. تنسيق البطاقات (Predict, Result, Login, Register) */
+/*  تنسيق البطاقات (Predict, Result, Login, Register) */
 /* ---------------------------------------------------- */
 
 .card {
@@ -112,7 +87,7 @@ h2{
 }
 
 /* ---------------------------------------------------- */
-/* 5. تنسيق صفحة النتيجة (Result Page) */
+/*    (prediction Page) */
 /* ---------------------------------------------------- */
 
 .text-success {
@@ -132,7 +107,9 @@ input { padding: 8px; border: 1px solid #ccc; border-radius: 5px; }
 .error-msg { color: red; background: #ffdada; padding: 10px; border-radius: 5px; }
 
 
-/*idex.html styling*/
+/* ---------------------------------------------------- */
+/* index.html */
+/* ---------------------------------------------------- */
  .features-container {
         display: flex;
         justify-content: space-around;
@@ -158,7 +135,7 @@ input { padding: 8px; border: 1px solid #ccc; border-radius: 5px; }
 
     .feature-icon {
         font-size: 40px;
-        color: #17a2b8; /* لون سماوي متناسق مع صورتك */
+        color: #17a2b8; /* لون سماوي متناسق   */
         margin-bottom: 20px;
     }
 
@@ -174,3 +151,25 @@ input { padding: 8px; border: 1px solid #ccc; border-radius: 5px; }
         color: #666;
         line-height: 1.8; /* تباعد الأسطر لراحة العين */
     }
+    .jumbotron, .bg-light {
+    background-color: #fff !important;
+    border-radius: 15px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+}
+
+.jumbotron h1 {
+    color: #007bff;
+    font-weight: 800;
+}
+
+.btn-primary {
+    background-color: #1b615d;
+    border-color: #007bff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: rgb(16, 125, 133);
+    border-color: #0056b3;
+    transform: translateY(-2px); 
+}

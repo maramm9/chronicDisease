@@ -7,7 +7,8 @@ DISEASE_RECOMMENDATIONS = {
         ],
         "links": [
             "https://www.mayoclinic.org/diseases-conditions/fungal-infections",
-            "https://medlineplus.gov/fungalinfections.html"
+            "https://medlineplus.gov/fungalinfections.html",
+            "https://www.webmd.com/skin-problems-and-treatments/guide/fungal-infections-skin"
         ]
     },
         "Allergy": {
@@ -18,7 +19,8 @@ DISEASE_RECOMMENDATIONS = {
         ],
         "links": [
             "https://www.mayoclinic.org/diseases-conditions/allergies",
-            "https://medlineplus.gov/allergy.html"
+            "https://medlineplus.gov/allergy.html",
+            "https://www.mayoclinic.org/diseases-conditions/allergies/symptoms-causes/syc-20351497"
         ]
     },
         "GERD": {
@@ -29,7 +31,8 @@ DISEASE_RECOMMENDATIONS = {
         ],
         "links": [
             "https://www.mayoclinic.org/diseases-conditions/gerd",
-            "https://medlineplus.gov/gerd.html"
+            "https://medlineplus.gov/gerd.html",
+            "https://www.mayoclinic.org/diseases-conditions/gerd/symptoms-causes/syc-20361940"
         ]
     },
         "Chronic cholestasis": {
@@ -40,7 +43,8 @@ DISEASE_RECOMMENDATIONS = {
         ],
         "links": [
             "https://www.mayoclinic.org/diseases-conditions/cholestasis",
-            "https://medlineplus.gov/liverdiseases.html"
+            "https://medlineplus.gov/liverdiseases.html",
+            "https://www.niddk.nih.gov/health-information/liver-disease"
         ]
     },
         "Drug Reaction": {
@@ -54,7 +58,7 @@ DISEASE_RECOMMENDATIONS = {
             "https://www.mayoclinic.org/drug-allergy"
         ]
     },
-        "Peptic ulcer disease": {
+        "Peptic ulcer diseae": {
         "tips": [
             "تجنب المسكنات",
             "الالتزام بالعلاج",
@@ -62,7 +66,8 @@ DISEASE_RECOMMENDATIONS = {
         ],
         "links": [
             "https://www.mayoclinic.org/diseases-conditions/peptic-ulcer",
-            "https://medlineplus.gov/pepticulcer.html"
+            "https://medlineplus.gov/pepticulcer.html",
+             "https://www.niddk.nih.gov/health-information/digestive-diseases/peptic-ulcers-stomach-ulcers"
         ]
     },
         "AIDS": {
@@ -76,7 +81,7 @@ DISEASE_RECOMMENDATIONS = {
             "https://medlineplus.gov/hivaids.html"
         ]
     },
-        "Diabetes ": {
+        "Diabetes": {
         "tips": [
             "مراقبة مستوى السكر",
             "اتباع نظام غذائي صحي",
@@ -84,7 +89,8 @@ DISEASE_RECOMMENDATIONS = {
         ],
         "links": [
             "https://www.who.int/news-room/fact-sheets/detail/diabetes",
-            "https://www.mayoclinic.org/diseases-conditions/diabetes"
+            "https://www.mayoclinic.org/diseases-conditions/diabetes",
+             "https://www.who.int/news-room/fact-sheets/detail/diabetes"
         ]
     },
         "Gastroenteritis": {
@@ -95,7 +101,8 @@ DISEASE_RECOMMENDATIONS = {
         ],
         "links": [
             "https://www.mayoclinic.org/diseases-conditions/gastroenteritis",
-            "https://medlineplus.gov/gastroenteritis.html"
+            "https://medlineplus.gov/gastroenteritis.html",
+            "https://www.webmd.com/digestive-disorders/digestive-diseases-gastroenteritis"
         ]
     },
         "Bronchial Asthma": {
@@ -216,29 +223,39 @@ DISEASE_RECOMMENDATIONS = {
         ],
         "links": [
             "https://www.who.int/news-room/fact-sheets/detail/hepatitis-a",
-            "https://medlineplus.gov/hepatitisa.html"
+            "https://medlineplus.gov/hepatitisa.html",
+            "https://www.who.int/news-room/fact-sheets/detail/hepatitis-a"
         ]
     },
         "Hepatitis B": {
         "tips": ["التطعيم",
                  "تجنب نقل العدوى",
                  "المتابعة الطبية"],
-        "links": ["https://www.who.int/news-room/fact-sheets/detail/hepatitis-b"]
+        "links": ["https://www.who.int/news-room/fact-sheets/detail/hepatitis-b",
+                  "https://www.mayoclinic.org/diseases-conditions/hepatitis-b/symptoms-causes/syc-20366802",
+                  "https://www.who.int/news-room/fact-sheets/detail/hepatitis-b"]
     },
         "Hepatitis C": {
         "tips": ["العلاج المضاد للفيروسات",
-                 "الفحص الدوري"],
-        "links": ["https://www.who.int/news-room/fact-sheets/detail/hepatitis-c"]
+                 "الفحص الدوري",
+                 "تجنب الكحول تماماً وراقب وظائف الكبد"],
+        "links": ["https://www.who.int/news-room/fact-sheets/detail/hepatitis-c",
+                  "https://www.who.int/news-room/fact-sheets/detail/hepatitis-c",
+                  "https://www.cdc.gov/hepatitis/hcv/"]
     },
         "Hepatitis D": {
         "tips": ["المتابعة الطبية",
-                 "علاج الالتهاب"],
-        "links": ["https://www.who.int/news-room/fact-sheets/detail/hepatitis-d"]
+                 "علاج الالتهاب",
+                 "تجنب الكحول والعوامل المضرة للكبد"],
+        "links": ["https://www.who.int/news-room/fact-sheets/detail/hepatitis-d",
+                  "https://www.niddk.nih.gov/health-information/liver-disease/viral-hepatitis/hepatitis-d"]
     },
         "Hepatitis E": {
         "tips": ["شرب مياه نظيفة",
-                 "الراحة"],
-        "links": ["https://www.who.int/news-room/fact-sheets/detail/hepatitis-e"]
+                 "الراحة",
+                 "النساء الحوامل في خطر أكبر - تابعي مع الطبيب"],
+        "links": ["https://www.who.int/news-room/fact-sheets/detail/hepatitis-e",
+                   "https://www.cdc.gov/hepatitis/hev/"]
     },
         "Alcoholic hepatitis": {
         "tips": [
@@ -248,40 +265,44 @@ DISEASE_RECOMMENDATIONS = {
         ],
         "links": [
             "https://www.mayoclinic.org/diseases-conditions/alcoholic-hepatitis",
-            "https://www.cdc.gov/alcohol"
+            "https://www.cdc.gov/alcohol",
+            "https://www.niddk.nih.gov/health-information/liver-disease/alcoholic-liver-disease"
         ]
     },
         "Tuberculosis": {
         "tips": [
             "الالتزام الكامل بالعلاج",
-            "تجنب نقل العدوى",
+            "أبلغ عن مخالطيك ليتم فحصهم",
             "المتابعة الطبية"
         ],
         "links": [
             "https://www.who.int/news-room/fact-sheets/detail/tuberculosis",
-            "https://www.cdc.gov/tb"
+            "https://www.cdc.gov/tb",
+
         ]
     },
         "Common Cold": {
         "tips": [
-            "الراحة",
+            "استرح واشرب سوائل دافئة وفيرة",
             "الإكثار من السوائل",
             "تناول فيتامين C"
         ],
         "links": [
             "https://www.mayoclinic.org/diseases-conditions/common-cold",
-            "https://medlineplus.gov/commoncold.html"
+            "https://medlineplus.gov/commoncold.html",
+            "https://www.mayoclinic.org/diseases-conditions/common-cold/symptoms-causes/syc-20351605"
         ]
     },
         "Pneumonia": {
         "tips": [
-            "الراحة",
+            "استرح تماماً واشرب سوائل وفيرة",
             "تناول المضادات الحيوية",
             "مراجعة الطبيب"
         ],
         "links": [
             "https://www.who.int/news-room/fact-sheets/detail/pneumonia",
-            "https://www.mayoclinic.org/diseases-conditions/pneumonia"
+            "https://www.mayoclinic.org/diseases-conditions/pneumonia",
+            "https://www.who.int/news-room/fact-sheets/detail/pneumonia"
         ]
     },
         "Dimorphic hemmorhoids(piles)": {
@@ -292,48 +313,60 @@ DISEASE_RECOMMENDATIONS = {
         ],
         "links": [
             "https://www.mayoclinic.org/diseases-conditions/hemorrhoids",
-            "https://medlineplus.gov/hemorrhoids.html"
+            "https://medlineplus.gov/hemorrhoids.html",
+            "https://www.webmd.com/digestive-disorders/hemorrhoids"
         ]
     },
         "Heart attack": {
         "tips": [
             "التوجه للطوارئ فورًا",
-            "تجنب الجهد",
+            " امضغ حبة اسبرين إن لم تكن لديك حساسية منه",
             "الالتزام بالعلاج الطبي"
         ],
         "links": [
             "https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)",
-            "https://www.mayoclinic.org/diseases-conditions/heart-attack"
+            "https://www.mayoclinic.org/diseases-conditions/heart-attack",
+            "https://www.heart.org/en/health-topics/heart-attack"
         ]
     },
         "Varicose veins": {
         "tips": [
-            "رفع الساقين",
+            "ارفع ساقيك فوق مستوى قلبك عند الراحة",
             "تجنب الوقوف الطويل",
             "ممارسة المشي"
         ],
         "links": [
             "https://www.mayoclinic.org/diseases-conditions/varicose-veins",
-            "https://medlineplus.gov/varicoseveins.html"
+            "https://medlineplus.gov/varicoseveins.html",
+             "https://www.webmd.com/skin-problems-and-treatments/cosmetic-procedures-varicose-vein-treatments"
         ]
     },
         "Hypothyroidism": {
         "tips": ["الالتزام بالعلاج الهرموني",
-                 "المتابعة الدورية"],
-        "links": ["https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/"]
+                 "المتابعة الدورية",
+                 "تجنب الإفراط في أطعمة تحتوي على اليود"],
+        "links": ["https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/",
+                  "https://www.thyroid.org/hypothyroidism/",
+                  "https://www.mayoclinic.org/diseases-conditions/hypothyroidism/symptoms-causes/syc-20350284"]
     },
         "Hyperthyroidism":{
          "tips": ["  تقليل التوتر",
-                 "  العلاج المنتظم"],
-         "links": ["https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/"]
+                 "  العلاج المنتظم",
+                 "افحص وظائف الغدة بانتظام"],
+         "links": ["https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/",
+                   "https://www.mayoclinic.org/diseases-conditions/hyperthyroidism/symptoms-causes/syc-20373659",
+                   "https://www.thyroid.org/hyperthyroidism/"]
 
     },
         "Hypoglycemia": {
         "tips": [" مراقبة السكر",
-                 "تناول وجبات منظمة"],
-        "links": ["https://www.diabetes.org/diabetes/complications/hypoglycemia"]
+                 "تناول وجبات منظمة",
+                 "استشر طبيبك لضبط جرعات الأنسولين أو الأدوية"],
+        "links": ["https://www.diabetes.org/diabetes/complications/hypoglycemia",
+                  "https://www.diabetes.org/healthy-living/medication-treatments/blood-glucose-testing-and-control/hypoglycemia",
+                  "https://www.mayoclinic.org/diseases-conditions/hypoglycemia/symptoms-causes/syc-20373685"]
     },
-        "Osteoarthritis": {
+        "Osteoarthristis": {
             "tips": [
             "ممارسة التمارين الخفيفة",
             "تخفيف الوزن",
@@ -385,7 +418,8 @@ DISEASE_RECOMMENDATIONS = {
         ],
         "links": [
             "https://www.mayoclinic.org/diseases-conditions/urinary-tract-infection",
-            "https://medlineplus.gov/urinarytractinfections.html"
+            "https://medlineplus.gov/urinarytractinfections.html",
+             "https://www.niddk.nih.gov/health-information/urologic-diseases/urinary-tract-infections-in-adults"
         ]
     },
         "Psoriasis": {
@@ -396,12 +430,16 @@ DISEASE_RECOMMENDATIONS = {
         ],
         "links": [
             "https://www.mayoclinic.org/diseases-conditions/psoriasis",
-            "https://medlineplus.gov/psoriasis.html"
+            "https://medlineplus.gov/psoriasis.html",
+            "https://www.mayoclinic.org/diseases-conditions/psoriasis/symptoms-causes/syc-20355840"
         ]
     },
         "Impetigo": {
         "tips": ["النظافة",
-                 "استخدام المضادات الحيوية"],
-        "links": ["https://www.nhs.uk/conditions/impetigo/"]
+                 "استخدام المضادات الحيوية",
+                 "اغسل يديك باستمرار لمنع انتشار العدوى"],
+        "links": ["https://www.nhs.uk/conditions/impetigo/",
+                  "https://www.aad.org/public/diseases/a-z/impetigo-overview",
+                  "https://www.mayoclinic.org/diseases-conditions/impetigo/symptoms-causes/syc-20352352"]
     }
 }

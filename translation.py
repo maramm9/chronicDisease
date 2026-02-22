@@ -124,7 +124,7 @@ SYMPTOMS_AR = {
     'painful_walking': 'ألم أثناء المشي',
     'pus_filled_pimples': 'بثور ممتلئة بالقيح',
     'blackheads': 'رؤوس سوداء',
-    'scurring': 'تقشر الجلد',
+    'scurring': 'ندبات',
     'skin_peeling': 'تقشر الجلد',
     'silver_like_dusting': 'قشور فضية',
     'small_dents_in_nails': 'حفر صغيرة في الأظافر',
@@ -137,7 +137,7 @@ SYMPTOMS_AR = {
 
 #ترجمة الأمراض
 DISEASE_AR={
-    'Paroxysmal Positional Vertigo (vertigo)': 'الدوار الموضعي الانتيابي',
+    '(vertigo) Paroymsal  Positional Vertigo': 'الدوار الموضعي الانتيابي',
     'AIDS': 'الإيدز',
     'Acne': 'حب الشباب',
     'Alcoholic hepatitis': 'التهاب الكبد الكحولي',
@@ -149,7 +149,7 @@ DISEASE_AR={
     'Chronic cholestasis': 'ركود صفراوي مزمن',
     'Common Cold': 'نزلة برد',
     'Dengue': 'حمى الضنك',
-    'Diabetes ': 'السكري',
+    'Diabetes': 'السكري',
     'Dimorphic hemmorhoids(piles)': 'بواسير',
     'Drug Reaction': 'تفاعل دوائي',
     'Fungal infection': 'عدوى فطرية',
